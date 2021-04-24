@@ -8,7 +8,6 @@
 , scipy
 , scikitlearn
 , pytest
-, setuptools-scm
 }:
 
 buildPythonPackage rec {
@@ -21,7 +20,6 @@ buildPythonPackage rec {
   };
 
   checkInputs = [ pytest ];
-  nativeBuildInputs = [ setuptools-scm ];
   propagatedBuildInputs = [ cloudpickle dask numpy toolz multipledispatch scipy scikitlearn ];
 
   checkPhase = ''
